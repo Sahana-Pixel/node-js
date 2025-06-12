@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJS setup</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <style>
+        body{
+            background-color: black;
+            color: aquamarine;
+        }
+    </style> -->
+</head>
+<body>
+    <!-- this will include the variable name from sever.js js variable -->
+     <!-- this name and products come from server.js -->
+    <h1>learning ejs  </h1>
+    <h2><%= name %></h2>
+    <ul>
+        <li>Food 1 : <%= products[0].title %>   Price : <%= products[0].price %>rs </li>
+        <li>Food 1 : <%= products[1].title %>   Price : <%= products[1].price %>rs </li>
+        <li>Food 1 : <%= products[2].title %>   Price : <%= products[2].price %>rs </li>
+    </ul>
+</body>
+</html>

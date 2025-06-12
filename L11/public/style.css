@@ -1,0 +1,7 @@
+/* css is static folder 
+css wont change 
+ejs is not reading  */
+        body{
+            background-color: black;
+            color: aquamarine;
+        }
