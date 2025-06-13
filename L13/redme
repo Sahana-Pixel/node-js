@@ -9,3 +9,6 @@ replace password in that
 then downloaded mongodb ui
 after that add new connecton 
 paste that url 
+the data in mongo atlas is accessed by mongo compass
+now how to connect mongo db to express also we need package to connect them that is moongoes 
+install monggoes from npm
