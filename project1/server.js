@@ -16,14 +16,20 @@ import { getoriginalUrl, shortUrl } from './Controllers/url.js';
 const app=express();
 
 // through this i can get req.body
+
+
 app.use(express.urlencoded({extended:true}))
 
+// mongo db connection
 mongoose.connect("mongodb+srv://sahana:sahana@cluster0.mz45cei.mongodb.net/",
-    {
-        dbName:"Nodejs_course"
-    }
+    {dbName:"Nodejs_course"}
 ).then(()=>console.log("mongoDb Connected")).catch((err)=>console.log(err))
+
+
+
+
 // Renders the form/page where the user inputs the long URL. Initially, there's no shortUrl, so it's null.
+
 app.get('/',(req,res)=>{
     res.render('index.ejs',{shortUrl:null})
 })
@@ -32,7 +38,11 @@ app.post('/short',shortUrl)
 
 // dyanamic route 
 // redirect to orginal url using shortcode 
+
+
 app.get('/:shortCode',getoriginalUrl);
+
+
 // /xyz987	/:shortCode
 // :shortCode is a placeholder for any value that comes after the /
 // That value is stored in req.params.shortCode

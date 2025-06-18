@@ -5,15 +5,18 @@ export const shortUrl= async (req,res)=>{
     // to short url i need to generate ID we need to install shortid 
     const longUrl=req.body.longUrl
     const shortCode=shortid.generate()
+
     // after deploying this will change  http://localhost:3001
     const shortUrl=`http://localhost:2000/${shortCode}`
 
     console.log("short saved=",shortUrl)
+
+    // in db there is also save method
     // save to db
     // for which longUrl shortcode is saved
     const newUrl=new Url({shortCode,longUrl})
     await newUrl.save()
-    // in db there is also save method
+    
 
     console.log("short saved=",newUrl)
     res.render("index.ejs",{shortUrl})
@@ -27,6 +30,7 @@ export const getoriginalUrl =async(req,res)=>{
     // to got the shortcode we do req.parm
     // http://localhost:3000/abc123       req.params.shortCode === 'abc123' 
     const shortCode =req.params.shortCode
+    
     // find o db 
     const originalUrl= await Url.findOne({shortCode})
     if(originalUrl)
