@@ -1,0 +1,7 @@
+api
+- that listen the request  and gets the res from backend
+- google mein sign ki toh ab google ne api i hain from that other website can access so that user can sign in with google 
+- api banate hain aur alaga alag framwork pe request karte hain
+- which mean ek bar backend likdo to har bar kam ata hain
+- frontend framework se api request karte hain 
+- 
