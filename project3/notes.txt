@@ -4,4 +4,6 @@ api
 - api banate hain aur alaga alag framwork pe request karte hain
 - which mean ek bar backend likdo to har bar kam ata hain
 - frontend framework se api request karte hain 
-- 
+- endpoint-> /name this will show that page 
+- video/contact -> contact ko get karne ka endpoint
+- video/contact/:id -> particular contact id endpoint
